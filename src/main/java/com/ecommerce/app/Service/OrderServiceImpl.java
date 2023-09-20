@@ -1,6 +1,7 @@
 package com.ecommerce.app.Service;
 
 import java.time.Instant;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -77,6 +78,11 @@ public class OrderServiceImpl implements OrderService {
 				.orderDate(order.getOrderDate())
 				.build();
 		return orderResponse;
+	}
+
+	@Override
+	public List<Order> getAllOrderDetails() {
+		return orderRepository.findAll();
 	}
 
 }
