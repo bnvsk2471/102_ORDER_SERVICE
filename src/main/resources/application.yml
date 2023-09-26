@@ -15,6 +15,10 @@ spring:
     name: ORDER-SERVICE
   config:
     import: configserver:http://localhost:9296
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
      
 #eureka:
 #  instance:

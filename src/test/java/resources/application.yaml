@@ -1,0 +1,13 @@
+#If we write application.yaml properties in test/java within resource folder then this properties 
+# are applicable for only that test/java
+
+spring:
+  config:
+    import: optional:configserver:http://localhost:9296
+  datasource:
+    url: jdbc:h2:mem:order
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
